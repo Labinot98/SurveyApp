@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DFAACC42BB6E8F300DEDC71 /* SurveyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACC32BB6E8F300DEDC71 /* SurveyAppApp.swift */; };
+		2DFAACC62BB6E8F300DEDC71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACC52BB6E8F300DEDC71 /* ContentView.swift */; };
+		2DFAACC82BB6E8F700DEDC71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFAACC72BB6E8F700DEDC71 /* Assets.xcassets */; };
+		2DFAACCB2BB6E8F700DEDC71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFAACCA2BB6E8F700DEDC71 /* Preview Assets.xcassets */; };
+		2DFAACD52BB6E8F700DEDC71 /* SurveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACD42BB6E8F700DEDC71 /* SurveyAppTests.swift */; };
+		2DFAACDF2BB6E8F700DEDC71 /* SurveyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACDE2BB6E8F700DEDC71 /* SurveyAppUITests.swift */; };
+		2DFAACE12BB6E8F700DEDC71 /* SurveyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACE02BB6E8F700DEDC71 /* SurveyAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DFAACD12BB6E8F700DEDC71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DFAACB82BB6E8F300DEDC71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DFAACBF2BB6E8F300DEDC71;
+			remoteInfo = SurveyApp;
+		};
+		2DFAACDB2BB6E8F700DEDC71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DFAACB82BB6E8F300DEDC71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DFAACBF2BB6E8F300DEDC71;
+			remoteInfo = SurveyApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DFAACC02BB6E8F300DEDC71 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DFAACC32BB6E8F300DEDC71 /* SurveyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppApp.swift; sourceTree = "<group>"; };
+		2DFAACC52BB6E8F300DEDC71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2DFAACC72BB6E8F700DEDC71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DFAACCA2BB6E8F700DEDC71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2DFAACD02BB6E8F700DEDC71 /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DFAACD42BB6E8F700DEDC71 /* SurveyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppTests.swift; sourceTree = "<group>"; };
+		2DFAACDA2BB6E8F700DEDC71 /* SurveyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DFAACDE2BB6E8F700DEDC71 /* SurveyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppUITests.swift; sourceTree = "<group>"; };
+		2DFAACE02BB6E8F700DEDC71 /* SurveyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DFAACBD2BB6E8F300DEDC71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DFAACCD2BB6E8F700DEDC71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DFAACD72BB6E8F700DEDC71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DFAACB72BB6E8F300DEDC71 = {
+			isa = PBXGroup;
+			children = (
+				2DFAACC22BB6E8F300DEDC71 /* SurveyApp */,
+				2DFAACD32BB6E8F700DEDC71 /* SurveyAppTests */,
+				2DFAACDD2BB6E8F700DEDC71 /* SurveyAppUITests */,
+				2DFAACC12BB6E8F300DEDC71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DFAACC12BB6E8F300DEDC71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DFAACC02BB6E8F300DEDC71 /* SurveyApp.app */,
+				2DFAACD02BB6E8F700DEDC71 /* SurveyAppTests.xctest */,
+				2DFAACDA2BB6E8F700DEDC71 /* SurveyAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DFAACC22BB6E8F300DEDC71 /* SurveyApp */ = {
+			isa = PBXGroup;
+			children = (
+				2DFAACC32BB6E8F300DEDC71 /* SurveyAppApp.swift */,
+				2DFAACC52BB6E8F300DEDC71 /* ContentView.swift */,
+				2DFAACC72BB6E8F700DEDC71 /* Assets.xcassets */,
+				2DFAACC92BB6E8F700DEDC71 /* Preview Content */,
+			);
+			path = SurveyApp;
+			sourceTree = "<group>";
+		};
+		2DFAACC92BB6E8F700DEDC71 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2DFAACCA2BB6E8F700DEDC71 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2DFAACD32BB6E8F700DEDC71 /* SurveyAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DFAACD42BB6E8F700DEDC71 /* SurveyAppTests.swift */,
+			);
+			path = SurveyAppTests;
+			sourceTree = "<group>";
+		};
+		2DFAACDD2BB6E8F700DEDC71 /* SurveyAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2DFAACDE2BB6E8F700DEDC71 /* SurveyAppUITests.swift */,
+				2DFAACE02BB6E8F700DEDC71 /* SurveyAppUITestsLaunchTests.swift */,
+			);
+			path = SurveyAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DFAACBF2BB6E8F300DEDC71 /* SurveyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DFAACE42BB6E8F700DEDC71 /* Build configuration list for PBXNativeTarget "SurveyApp" */;
+			buildPhases = (
+				2DFAACBC2BB6E8F300DEDC71 /* Sources */,
+				2DFAACBD2BB6E8F300DEDC71 /* Frameworks */,
+				2DFAACBE2BB6E8F300DEDC71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SurveyApp;
+			productName = SurveyApp;
+			productReference = 2DFAACC02BB6E8F300DEDC71 /* SurveyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DFAACCF2BB6E8F700DEDC71 /* SurveyAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DFAACE72BB6E8F700DEDC71 /* Build configuration list for PBXNativeTarget "SurveyAppTests" */;
+			buildPhases = (
+				2DFAACCC2BB6E8F700DEDC71 /* Sources */,
+				2DFAACCD2BB6E8F700DEDC71 /* Frameworks */,
+				2DFAACCE2BB6E8F700DEDC71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DFAACD22BB6E8F700DEDC71 /* PBXTargetDependency */,
+			);
+			name = SurveyAppTests;
+			productName = SurveyAppTests;
+			productReference = 2DFAACD02BB6E8F700DEDC71 /* SurveyAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2DFAACD92BB6E8F700DEDC71 /* SurveyAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DFAACEA2BB6E8F700DEDC71 /* Build configuration list for PBXNativeTarget "SurveyAppUITests" */;
+			buildPhases = (
+				2DFAACD62BB6E8F700DEDC71 /* Sources */,
+				2DFAACD72BB6E8F700DEDC71 /* Frameworks */,
+				2DFAACD82BB6E8F700DEDC71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DFAACDC2BB6E8F700DEDC71 /* PBXTargetDependency */,
+			);
+			name = SurveyAppUITests;
+			productName = SurveyAppUITests;
+			productReference = 2DFAACDA2BB6E8F700DEDC71 /* SurveyAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DFAACB82BB6E8F300DEDC71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					2DFAACBF2BB6E8F300DEDC71 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					2DFAACCF2BB6E8F700DEDC71 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 2DFAACBF2BB6E8F300DEDC71;
+					};
+					2DFAACD92BB6E8F700DEDC71 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 2DFAACBF2BB6E8F300DEDC71;
+					};
+				};
+			};
+			buildConfigurationList = 2DFAACBB2BB6E8F300DEDC71 /* Build configuration list for PBXProject "SurveyApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DFAACB72BB6E8F300DEDC71;
+			productRefGroup = 2DFAACC12BB6E8F300DEDC71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DFAACBF2BB6E8F300DEDC71 /* SurveyApp */,
+				2DFAACCF2BB6E8F700DEDC71 /* SurveyAppTests */,
+				2DFAACD92BB6E8F700DEDC71 /* SurveyAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DFAACBE2BB6E8F300DEDC71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DFAACCB2BB6E8F700DEDC71 /* Preview Assets.xcassets in Resources */,
+				2DFAACC82BB6E8F700DEDC71 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DFAACCE2BB6E8F700DEDC71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DFAACD82BB6E8F700DEDC71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DFAACBC2BB6E8F300DEDC71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DFAACC62BB6E8F300DEDC71 /* ContentView.swift in Sources */,
+				2DFAACC42BB6E8F300DEDC71 /* SurveyAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DFAACCC2BB6E8F700DEDC71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DFAACD52BB6E8F700DEDC71 /* SurveyAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DFAACD62BB6E8F700DEDC71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DFAACE12BB6E8F700DEDC71 /* SurveyAppUITestsLaunchTests.swift in Sources */,
+				2DFAACDF2BB6E8F700DEDC71 /* SurveyAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DFAACD22BB6E8F700DEDC71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DFAACBF2BB6E8F300DEDC71 /* SurveyApp */;
+			targetProxy = 2DFAACD12BB6E8F700DEDC71 /* PBXContainerItemProxy */;
+		};
+		2DFAACDC2BB6E8F700DEDC71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DFAACBF2BB6E8F300DEDC71 /* SurveyApp */;
+			targetProxy = 2DFAACDB2BB6E8F700DEDC71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2DFAACE22BB6E8F700DEDC71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DFAACE32BB6E8F700DEDC71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DFAACE52BB6E8F700DEDC71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SurveyApp/Preview Content\"";
+				DEVELOPMENT_TEAM = MMLNF3BF4U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ClickITDev.SurveyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DFAACE62BB6E8F700DEDC71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SurveyApp/Preview Content\"";
+				DEVELOPMENT_TEAM = MMLNF3BF4U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ClickITDev.SurveyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2DFAACE82BB6E8F700DEDC71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MMLNF3BF4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ClickITDev.SurveyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SurveyApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SurveyApp";
+			};
+			name = Debug;
+		};
+		2DFAACE92BB6E8F700DEDC71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MMLNF3BF4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ClickITDev.SurveyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SurveyApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SurveyApp";
+			};
+			name = Release;
+		};
+		2DFAACEB2BB6E8F700DEDC71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MMLNF3BF4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ClickITDev.SurveyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SurveyApp;
+			};
+			name = Debug;
+		};
+		2DFAACEC2BB6E8F700DEDC71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MMLNF3BF4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ClickITDev.SurveyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SurveyApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DFAACBB2BB6E8F300DEDC71 /* Build configuration list for PBXProject "SurveyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DFAACE22BB6E8F700DEDC71 /* Debug */,
+				2DFAACE32BB6E8F700DEDC71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DFAACE42BB6E8F700DEDC71 /* Build configuration list for PBXNativeTarget "SurveyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DFAACE52BB6E8F700DEDC71 /* Debug */,
+				2DFAACE62BB6E8F700DEDC71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DFAACE72BB6E8F700DEDC71 /* Build configuration list for PBXNativeTarget "SurveyAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DFAACE82BB6E8F700DEDC71 /* Debug */,
+				2DFAACE92BB6E8F700DEDC71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DFAACEA2BB6E8F700DEDC71 /* Build configuration list for PBXNativeTarget "SurveyAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DFAACEB2BB6E8F700DEDC71 /* Debug */,
+				2DFAACEC2BB6E8F700DEDC71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DFAACB82BB6E8F300DEDC71 /* Project object */;
+}
