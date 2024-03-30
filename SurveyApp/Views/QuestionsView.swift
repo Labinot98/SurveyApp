@@ -53,7 +53,9 @@ struct QuestionsView: View {
                     }.disabled(isNextButtonDisabled)
                 }
                 .padding()
-            
+                
+                Text("Submitted: \(viewModel.submittedQuestionsCount)")
+                    .padding(.top, 10)
                 
                 if let status = viewModel.submissionStatus {
                     Text(status == .success ? "Success!" : "Failure...")
