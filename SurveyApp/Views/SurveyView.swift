@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SurveyView: View {
-    @StateObject var viewModel = SurveyViewModel()
+    @StateObject var viewModel = SurveyViewModel(useCase: SurveyInteractor(repository: SurveyDataRepository()))
     @State private var isSurveyStarted = false
     
     var body: some View {
@@ -33,8 +33,3 @@ struct SurveyView: View {
         }
     }
 }
-
-
-//#Preview {
-//    SurveyView()
-//}

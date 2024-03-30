@@ -13,44 +13,55 @@ struct QuestionsView: View {
     
     var body: some View {
         VStack {
-            if let question = viewModel.currentQuestion {
-                Text("Question \(viewModel.currentQuestionIndex + 1) of \(viewModel.questions.count)")
-                
-                Text(question.question)
-                
-                TextField("Enter your answer", text: $answerText)
+            if viewModel.questions.isEmpty {
+                Text("No questions available")
+                    .font(.headline)
+                    .foregroundColor(.gray)
                     .padding()
-                
-                HStack {
-                    Button("Previous") {
-                        viewModel.moveToPreviousQuestion()
-                    }.disabled(viewModel.isPreviousButtonDisabled)
-                    
-                    Button("Submit") {
-                        viewModel.submitAnswer(answerText: answerText)
-                        answerText = ""
-                    }.disabled(answerText.isEmpty || viewModel.hasSubmittedAnswer)
-                    
-                    Button("Next") {
-                        viewModel.moveToNextQuestion()
-                    }.disabled(viewModel.isNextButtonDisabled)
+            } else {
+                TabView(selection: $viewModel.currentQuestionIndex) {
+                    ForEach(0..<viewModel.questions.count, id: \.self) { index in
+                        QuestionCardView(question: viewModel.questions[index], answerText: $answerText, viewModel: viewModel)
+                            .tag(index)
+                    }
                 }
-                .padding()
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+                .padding(.bottom, 20)
                 
                 Text("Submitted: \(viewModel.submittedQuestionsCount)")
+                    .font(.headline)
+                    .foregroundColor(.gray)
                     .padding(.top, 10)
                 
-                if let status = viewModel.submissionStatus {
-                    Text(status == .success ? "Success!" : "Failure...")
-                        .foregroundColor(status == .success ? .green : .red)
-                        .padding()
+                HStack {
+                    Button(action: {
+                        viewModel.moveToPreviousQuestion()
+                    }) {  Text("Previous") }
+                    .padding()
+                    .disabled(viewModel.isPreviousButtonDisabled)
+                    
+                    Button(action: {
+                        viewModel.submitAnswer(answerText: answerText)
+                        answerText = ""
+                    }) {
+                        Text(viewModel.hasSubmittedAnswer ? "Submitted" : "Submit")
+                    }
+                    .disabled(answerText.isEmpty || viewModel.hasSubmittedAnswer)
+                    
+                    Button(action: {
+                        viewModel.moveToNextQuestion()
+                    }) { Text("Next") }
+                    .padding()
+                    .disabled(viewModel.isNextButtonDisabled)
                 }
-            } else {
-                Text("No questions available")
+                .padding(.horizontal, 20)
+                
+                NotificationBannerView(viewModel: viewModel, answerText: $answerText)
+                    .padding(.horizontal, 20)
             }
-            
             Spacer()
-        }.onDisappear {
+        }
+        .onDisappear {
             viewModel.resetSurvey()
         }
     }

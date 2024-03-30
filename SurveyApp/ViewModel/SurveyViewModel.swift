@@ -8,78 +8,80 @@
 import Combine
 import SwiftUI
 
+protocol SurveyUseCase {
+    func fetchQuestions() -> AnyPublisher<[Question], Error>
+    func submitAnswer(answer: Answer) -> AnyPublisher<Void, Error>
+}
+
 class SurveyViewModel: ObservableObject {
+
     @Published var questions: [Question] = []
     @Published var currentQuestionIndex = 0
     @Published var submittedAnswers: [Int: Answer] = [:]
     @Published var submissionStatus: SubmissionStatus?
     
     private var cancellables = Set<AnyCancellable>()
+    private let useCase: SurveyUseCase
     
-    var submittedQuestionsCount: Int {
-        submittedAnswers.count
+        var submittedQuestionsCount: Int {
+            submittedAnswers.count
+        }
+    
+        var currentQuestion: Question? {
+            questions[safe: currentQuestionIndex]
+        }
+    
+        var isPreviousButtonDisabled: Bool {
+            currentQuestionIndex == 0
+        }
+    
+        var isNextButtonDisabled: Bool {
+            currentQuestionIndex == questions.count - 1
+        }
+    
+        var hasSubmittedAnswer: Bool {
+            guard let question = currentQuestion else { return false }
+            return submittedAnswers[question.id] != nil
+        }
+    
+    init(useCase: SurveyUseCase) {
+        self.useCase = useCase
     }
     
-    var currentQuestion: Question? {
-        questions[safe: currentQuestionIndex]
-    }
+        enum SubmissionStatus {
+            case success
+            case failure
+        }
     
-    var isPreviousButtonDisabled: Bool {
-        currentQuestionIndex == 0
-    }
-    
-    var isNextButtonDisabled: Bool {
-        currentQuestionIndex == questions.count - 1
-    }
-    
-    var hasSubmittedAnswer: Bool {
-        guard let question = currentQuestion else { return false }
-        return submittedAnswers[question.id] != nil
-    }
-    
-    enum SubmissionStatus {
-        case success
-        case failure
-    }
-
     func fetchQuestions() {
-        URLSession.shared.dataTaskPublisher(for: URL(string: "https://xm-assignment.web.app/questions")!)
-            .map { $0.data }
-            .decode(type: [Question].self, decoder: JSONDecoder())
-            .replaceError(with: [])
-            .receive(on: DispatchQueue.main)
-            .sink(receiveValue: { [weak self] questions in
-                self?.questions = questions
-            })
-            .store(in: &cancellables)
-    }
-
-    func submitAnswer(answerText: String) {
-        guard !answerText.isEmpty else { return }
-        guard let currentQuestion = currentQuestion else { return }
+            useCase.fetchQuestions()
+                .receive(on: DispatchQueue.main)
+                .sink(receiveCompletion: { _ in },
+                      receiveValue: { [weak self] questions in
+                        self?.questions = questions
+                      })
+                .store(in: &cancellables)
+        }
         
-        let answer = Answer(id: currentQuestion.id, answer: answerText)
-        submittedAnswers[currentQuestion.id] = answer
-
-        let url = URL(string: "https://xm-assignment.web.app/question/submit")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = try? JSONEncoder().encode(answer)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        URLSession.shared.dataTaskPublisher(for: request)
-            .map { $0.response as? HTTPURLResponse }
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { [weak self] completion in
-                switch completion {
+        func submitAnswer(answerText: String) {
+            guard !answerText.isEmpty else { return }
+            guard let currentQuestion = currentQuestion else { return }
+            
+            let answer = Answer(id: currentQuestion.id, answer: answerText)
+            submittedAnswers[currentQuestion.id] = answer
+            
+            useCase.submitAnswer(answer: answer)
+                .receive(on: DispatchQueue.main)
+                .sink(receiveCompletion: { [weak self] completion in
+                    switch completion {
                     case .finished:
                         self?.submissionStatus = .success
                     case .failure:
                         self?.submissionStatus = .failure
-                }
-            }, receiveValue: { _ in })
-            .store(in: &cancellables)
-    }
+                    }
+                }, receiveValue: { _ in })
+                .store(in: &cancellables)
+        }
 
     func moveToPreviousQuestion() {
         if currentQuestionIndex > 0 {
