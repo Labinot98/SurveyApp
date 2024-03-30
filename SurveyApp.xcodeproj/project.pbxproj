@@ -15,6 +15,8 @@
 		2DF4B7562BB862E900F48FC1 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF4B7552BB862E900F48FC1 /* URLRequestBuilder.swift */; };
 		2DF4B7582BB862F300F48FC1 /* DefaultURLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF4B7572BB862F300F48FC1 /* DefaultURLRequestBuilder.swift */; };
 		2DF4B75B2BB863CF00F48FC1 /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF4B75A2BB863CF00F48FC1 /* QuestionCardView.swift */; };
+		2DF4B75D2BB86B5A00F48FC1 /* URLRequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF4B75C2BB86B5900F48FC1 /* URLRequestBuilderTests.swift */; };
+		2DF4B7632BB86D6600F48FC1 /* SurveyInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF4B7622BB86D6600F48FC1 /* SurveyInteractorTests.swift */; };
 		2DFAACC42BB6E8F300DEDC71 /* SurveyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACC32BB6E8F300DEDC71 /* SurveyAppApp.swift */; };
 		2DFAACC82BB6E8F700DEDC71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFAACC72BB6E8F700DEDC71 /* Assets.xcassets */; };
 		2DFAACCB2BB6E8F700DEDC71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFAACCA2BB6E8F700DEDC71 /* Preview Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		2DF4B7552BB862E900F48FC1 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 		2DF4B7572BB862F300F48FC1 /* DefaultURLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultURLRequestBuilder.swift; sourceTree = "<group>"; };
 		2DF4B75A2BB863CF00F48FC1 /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
+		2DF4B75C2BB86B5900F48FC1 /* URLRequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilderTests.swift; sourceTree = "<group>"; };
+		2DF4B7622BB86D6600F48FC1 /* SurveyInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyInteractorTests.swift; sourceTree = "<group>"; };
 		2DFAACC02BB6E8F300DEDC71 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFAACC32BB6E8F300DEDC71 /* SurveyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppApp.swift; sourceTree = "<group>"; };
 		2DFAACC72BB6E8F700DEDC71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				2DFAACD42BB6E8F700DEDC71 /* SurveyAppTests.swift */,
+				2DF4B75C2BB86B5900F48FC1 /* URLRequestBuilderTests.swift */,
+				2DF4B7622BB86D6600F48FC1 /* SurveyInteractorTests.swift */,
 			);
 			path = SurveyAppTests;
 			sourceTree = "<group>";
@@ -367,6 +373,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DFAACD52BB6E8F700DEDC71 /* SurveyAppTests.swift in Sources */,
+				2DF4B75D2BB86B5A00F48FC1 /* URLRequestBuilderTests.swift in Sources */,
+				2DF4B7632BB86D6600F48FC1 /* SurveyInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
