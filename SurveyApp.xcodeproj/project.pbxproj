@@ -21,8 +21,6 @@
 		2DFAACC82BB6E8F700DEDC71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFAACC72BB6E8F700DEDC71 /* Assets.xcassets */; };
 		2DFAACCB2BB6E8F700DEDC71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFAACCA2BB6E8F700DEDC71 /* Preview Assets.xcassets */; };
 		2DFAACD52BB6E8F700DEDC71 /* SurveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACD42BB6E8F700DEDC71 /* SurveyAppTests.swift */; };
-		2DFAACDF2BB6E8F700DEDC71 /* SurveyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACDE2BB6E8F700DEDC71 /* SurveyAppUITests.swift */; };
-		2DFAACE12BB6E8F700DEDC71 /* SurveyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACE02BB6E8F700DEDC71 /* SurveyAppUITestsLaunchTests.swift */; };
 		2DFAAD042BB829BF00DEDC71 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAAD032BB829BF00DEDC71 /* SurveyView.swift */; };
 		2DFAAD082BB82A1E00DEDC71 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAAD072BB82A1E00DEDC71 /* SurveyViewModel.swift */; };
 		2DFAAD0D2BB82BC200DEDC71 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAAD0C2BB82BC200DEDC71 /* Array+Extension.swift */; };
@@ -64,8 +62,6 @@
 		2DFAACD02BB6E8F700DEDC71 /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFAACD42BB6E8F700DEDC71 /* SurveyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppTests.swift; sourceTree = "<group>"; };
 		2DFAACDA2BB6E8F700DEDC71 /* SurveyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DFAACDE2BB6E8F700DEDC71 /* SurveyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppUITests.swift; sourceTree = "<group>"; };
-		2DFAACE02BB6E8F700DEDC71 /* SurveyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2DFAAD032BB829BF00DEDC71 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		2DFAAD072BB82A1E00DEDC71 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
 		2DFAAD0C2BB82BC200DEDC71 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
@@ -128,7 +124,6 @@
 			children = (
 				2DFAACC22BB6E8F300DEDC71 /* SurveyApp */,
 				2DFAACD32BB6E8F700DEDC71 /* SurveyAppTests */,
-				2DFAACDD2BB6E8F700DEDC71 /* SurveyAppUITests */,
 				2DFAACC12BB6E8F300DEDC71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -176,15 +171,6 @@
 				2DF4B7622BB86D6600F48FC1 /* SurveyInteractorTests.swift */,
 			);
 			path = SurveyAppTests;
-			sourceTree = "<group>";
-		};
-		2DFAACDD2BB6E8F700DEDC71 /* SurveyAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2DFAACDE2BB6E8F700DEDC71 /* SurveyAppUITests.swift */,
-				2DFAACE02BB6E8F700DEDC71 /* SurveyAppUITestsLaunchTests.swift */,
-			);
-			path = SurveyAppUITests;
 			sourceTree = "<group>";
 		};
 		2DFAAD022BB8299800DEDC71 /* Views */ = {
@@ -382,8 +368,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DFAACE12BB6E8F700DEDC71 /* SurveyAppUITestsLaunchTests.swift in Sources */,
-				2DFAACDF2BB6E8F700DEDC71 /* SurveyAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,8 +520,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -545,9 +529,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ClickITDev.SurveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -565,8 +552,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,9 +561,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ClickITDev.SurveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
