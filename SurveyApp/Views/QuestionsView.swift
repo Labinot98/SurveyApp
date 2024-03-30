@@ -15,6 +15,18 @@ struct QuestionsView: View {
         viewModel.questions[safe: viewModel.currentQuestionIndex]
     }
     
+    var isPreviousButtonDisabled: Bool {
+        viewModel.currentQuestionIndex == 0
+    }
+    
+    var isNextButtonDisabled: Bool {
+        viewModel.currentQuestionIndex == viewModel.questions.count - 1
+    }
+    
+    var hasSubmittedAnswer: Bool {
+        guard let question = currentQuestion else { return false }
+        return viewModel.submittedAnswers[question.id] != nil
+    }
     
     var body: some View {
         VStack {
@@ -26,6 +38,28 @@ struct QuestionsView: View {
                 TextField("Enter your answer", text: $answerText)
                     .padding()
                 
+                HStack {
+                    Button("Previous") {
+                        print("Previous")
+                    }.disabled(isPreviousButtonDisabled)
+                    
+                    Button("Submit") {
+                        viewModel.submitAnswer(answerText: answerText)
+                        answerText = ""
+                    }.disabled(answerText.isEmpty || hasSubmittedAnswer)
+                    
+                    Button("Next") {
+                        print("Next")
+                    }.disabled(isNextButtonDisabled)
+                }
+                .padding()
+            
+                
+                if let status = viewModel.submissionStatus {
+                    Text(status == .success ? "Success!" : "Failure...")
+                        .foregroundColor(status == .success ? .green : .red)
+                        .padding()
+                }
             } else {
                 Text("No questions available")
             }
