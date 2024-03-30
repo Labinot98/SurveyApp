@@ -8,6 +8,11 @@
 import Combine
 import SwiftUI
 
+enum SubmissionStatus {
+    case success
+    case failure
+}
+
 protocol SurveyUseCase {
     func fetchQuestions() -> AnyPublisher<[Question], Error>
     func submitAnswer(answer: Answer) -> AnyPublisher<Void, Error>
@@ -15,43 +20,39 @@ protocol SurveyUseCase {
 
 class SurveyViewModel: ObservableObject {
 
-    @Published var questions: [Question] = []
-    @Published var currentQuestionIndex = 0
-    @Published var submittedAnswers: [Int: Answer] = [:]
+    @Published var questions: [Question]             = []
+    @Published var currentQuestionIndex              = 0
+    @Published var submittedAnswers: [Int: Answer]   = [:]
     @Published var submissionStatus: SubmissionStatus?
     
     private var cancellables = Set<AnyCancellable>()
     private let useCase: SurveyUseCase
     
-        var submittedQuestionsCount: Int {
-            submittedAnswers.count
-        }
-    
-        var currentQuestion: Question? {
-            questions[safe: currentQuestionIndex]
-        }
-    
-        var isPreviousButtonDisabled: Bool {
-            currentQuestionIndex == 0
-        }
-    
-        var isNextButtonDisabled: Bool {
-            currentQuestionIndex == questions.count - 1
-        }
-    
-        var hasSubmittedAnswer: Bool {
-            guard let question = currentQuestion else { return false }
-            return submittedAnswers[question.id] != nil
-        }
+    var submittedQuestionsCount: Int {
+        submittedAnswers.count
+    }
+
+    var currentQuestion: Question? {
+        questions[safe: currentQuestionIndex]
+    }
+
+    var isPreviousButtonDisabled: Bool {
+        currentQuestionIndex == 0
+    }
+
+    var isNextButtonDisabled: Bool {
+        currentQuestionIndex == questions.count - 1
+    }
+
+    var hasSubmittedAnswer: Bool {
+        guard let question = currentQuestion else { return false }
+        return submittedAnswers[question.id] != nil
+    }
     
     init(useCase: SurveyUseCase) {
         self.useCase = useCase
     }
     
-        enum SubmissionStatus {
-            case success
-            case failure
-        }
     
     func fetchQuestions() {
             useCase.fetchQuestions()
