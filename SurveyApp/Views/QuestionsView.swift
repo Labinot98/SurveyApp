@@ -11,26 +11,9 @@ struct QuestionsView: View {
     @ObservedObject var viewModel: SurveyViewModel
     @State private var answerText = ""
     
-    var currentQuestion: Question? {
-        viewModel.questions[safe: viewModel.currentQuestionIndex]
-    }
-    
-    var isPreviousButtonDisabled: Bool {
-        viewModel.currentQuestionIndex == 0
-    }
-    
-    var isNextButtonDisabled: Bool {
-        viewModel.currentQuestionIndex == viewModel.questions.count - 1
-    }
-    
-    var hasSubmittedAnswer: Bool {
-        guard let question = currentQuestion else { return false }
-        return viewModel.submittedAnswers[question.id] != nil
-    }
-    
     var body: some View {
         VStack {
-            if let question = currentQuestion {
+            if let question = viewModel.currentQuestion {
                 Text("Question \(viewModel.currentQuestionIndex + 1) of \(viewModel.questions.count)")
                 
                 Text(question.question)
@@ -41,16 +24,16 @@ struct QuestionsView: View {
                 HStack {
                     Button("Previous") {
                         viewModel.moveToPreviousQuestion()
-                    }.disabled(isPreviousButtonDisabled)
+                    }.disabled(viewModel.isPreviousButtonDisabled)
                     
                     Button("Submit") {
                         viewModel.submitAnswer(answerText: answerText)
                         answerText = ""
-                    }.disabled(answerText.isEmpty || hasSubmittedAnswer)
+                    }.disabled(answerText.isEmpty || viewModel.hasSubmittedAnswer)
                     
                     Button("Next") {
                         viewModel.moveToNextQuestion()
-                    }.disabled(isNextButtonDisabled)
+                    }.disabled(viewModel.isNextButtonDisabled)
                 }
                 .padding()
                 

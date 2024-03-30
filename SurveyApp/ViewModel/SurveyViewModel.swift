@@ -15,9 +15,27 @@ class SurveyViewModel: ObservableObject {
     @Published var submissionStatus: SubmissionStatus?
     
     private var cancellables = Set<AnyCancellable>()
+    
     var submittedQuestionsCount: Int {
-           submittedAnswers.count
-       }
+        submittedAnswers.count
+    }
+    
+    var currentQuestion: Question? {
+        questions[safe: currentQuestionIndex]
+    }
+    
+    var isPreviousButtonDisabled: Bool {
+        currentQuestionIndex == 0
+    }
+    
+    var isNextButtonDisabled: Bool {
+        currentQuestionIndex == questions.count - 1
+    }
+    
+    var hasSubmittedAnswer: Bool {
+        guard let question = currentQuestion else { return false }
+        return submittedAnswers[question.id] != nil
+    }
     
     enum SubmissionStatus {
         case success
@@ -38,7 +56,7 @@ class SurveyViewModel: ObservableObject {
 
     func submitAnswer(answerText: String) {
         guard !answerText.isEmpty else { return }
-        guard let currentQuestion = questions[safe: currentQuestionIndex] else { return }
+        guard let currentQuestion = currentQuestion else { return }
         
         let answer = Answer(id: currentQuestion.id, answer: answerText)
         submittedAnswers[currentQuestion.id] = answer
@@ -76,10 +94,9 @@ class SurveyViewModel: ObservableObject {
     }
     
     func resetSurvey() {
-          currentQuestionIndex = 0
-          submittedAnswers = [:]
-          submissionStatus = nil
-      }
+        currentQuestionIndex = 0
+        submittedAnswers = [:]
+        submissionStatus = nil
+    }
 }
-
 
