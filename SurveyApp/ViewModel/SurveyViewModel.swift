@@ -63,7 +63,23 @@ class SurveyViewModel: ObservableObject {
             .store(in: &cancellables)
     }
 
-   
+    func moveToPreviousQuestion() {
+        if currentQuestionIndex > 0 {
+            currentQuestionIndex -= 1
+        }
+    }
+
+    func moveToNextQuestion() {
+        if currentQuestionIndex < questions.count - 1 {
+            currentQuestionIndex += 1
+        }
+    }
+    
+    func resetSurvey() {
+          currentQuestionIndex = 0
+          submittedAnswers = [:]
+          submissionStatus = nil
+      }
 }
 
 

@@ -40,7 +40,7 @@ struct QuestionsView: View {
                 
                 HStack {
                     Button("Previous") {
-                        print("Previous")
+                        viewModel.moveToPreviousQuestion()
                     }.disabled(isPreviousButtonDisabled)
                     
                     Button("Submit") {
@@ -49,7 +49,7 @@ struct QuestionsView: View {
                     }.disabled(answerText.isEmpty || hasSubmittedAnswer)
                     
                     Button("Next") {
-                        print("Next")
+                        viewModel.moveToNextQuestion()
                     }.disabled(isNextButtonDisabled)
                 }
                 .padding()
@@ -67,6 +67,8 @@ struct QuestionsView: View {
             }
             
             Spacer()
+        }.onDisappear {
+            viewModel.resetSurvey()
         }
     }
 }
