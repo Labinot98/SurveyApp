@@ -16,6 +16,8 @@
 		2DFAAD042BB829BF00DEDC71 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAAD032BB829BF00DEDC71 /* SurveyView.swift */; };
 		2DFAAD082BB82A1E00DEDC71 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAAD072BB82A1E00DEDC71 /* SurveyViewModel.swift */; };
 		2DFAAD0A2BB82A3600DEDC71 /* SurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAAD092BB82A3600DEDC71 /* SurveyModel.swift */; };
+		2DFAAD0D2BB82BC200DEDC71 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAAD0C2BB82BC200DEDC71 /* Array+Extension.swift */; };
+		2DFAAD102BB82C8100DEDC71 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAAD0F2BB82C8100DEDC71 /* QuestionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		2DFAAD032BB829BF00DEDC71 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		2DFAAD072BB82A1E00DEDC71 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
 		2DFAAD092BB82A3600DEDC71 /* SurveyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModel.swift; sourceTree = "<group>"; };
+		2DFAAD0C2BB82BC200DEDC71 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		2DFAAD0F2BB82C8100DEDC71 /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		2DFAACC22BB6E8F300DEDC71 /* SurveyApp */ = {
 			isa = PBXGroup;
 			children = (
+				2DFAAD0B2BB82B8B00DEDC71 /* Array+Extension */,
 				2DFAAD062BB829D800DEDC71 /* ViewModel */,
 				2DFAAD052BB829D300DEDC71 /* Model */,
 				2DFAAD022BB8299800DEDC71 /* Views */,
@@ -137,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				2DFAAD032BB829BF00DEDC71 /* SurveyView.swift */,
+				2DFAAD0F2BB82C8100DEDC71 /* QuestionsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +161,14 @@
 				2DFAAD072BB82A1E00DEDC71 /* SurveyViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DFAAD0B2BB82B8B00DEDC71 /* Array+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2DFAAD0C2BB82BC200DEDC71 /* Array+Extension.swift */,
+			);
+			path = "Array+Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DFAAD082BB82A1E00DEDC71 /* SurveyViewModel.swift in Sources */,
+				2DFAAD0D2BB82BC200DEDC71 /* Array+Extension.swift in Sources */,
+				2DFAAD102BB82C8100DEDC71 /* QuestionsView.swift in Sources */,
 				2DFAAD042BB829BF00DEDC71 /* SurveyView.swift in Sources */,
 				2DFAACC42BB6E8F300DEDC71 /* SurveyAppApp.swift in Sources */,
 				2DFAAD0A2BB82A3600DEDC71 /* SurveyModel.swift in Sources */,

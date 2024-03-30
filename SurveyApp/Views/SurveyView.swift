@@ -8,11 +8,33 @@
 import SwiftUI
 
 struct SurveyView: View {
+    @StateObject var viewModel = SurveyViewModel()
+    @State private var isSurveyStarted = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                NavigationLink(
+                    destination: QuestionsView(viewModel: viewModel),
+                    isActive: $isSurveyStarted,
+                    label: { EmptyView() }
+                )
+                
+                Button("Start Survey") {
+                    isSurveyStarted = true
+                }
+            }
+            .padding()
+            .navigationBarTitle("Survey")
+            .navigationBarBackButtonHidden(true)
+        }
+        .onAppear {
+            viewModel.fetchQuestions()
+        }
     }
 }
 
-#Preview {
-    SurveyView()
-}
+
+//#Preview {
+//    SurveyView()
+//}
