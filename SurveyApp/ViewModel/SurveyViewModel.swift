@@ -13,11 +13,6 @@ enum SubmissionStatus {
     case failure
 }
 
-protocol SurveyUseCase {
-    func fetchQuestions() -> AnyPublisher<[Question], Error>
-    func submitAnswer(answer: Answer) -> AnyPublisher<Void, Error>
-}
-
 class SurveyViewModel: ObservableObject {
 
     @Published var questions: [Question]             = []

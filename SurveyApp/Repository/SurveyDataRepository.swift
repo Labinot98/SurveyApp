@@ -1,23 +1,18 @@
 //
-//  SurveyRepository.swift
+//  SurveyDataRepository.swift
 //  SurveyApp
 //
-//  Created by Pajaziti Labinot on 30.3.24..
+//  Created by Pajaziti Labinot on 31.3.24..
 //
 
 import Foundation
 import Combine
 
-protocol SurveyRepository {
-    func fetchQuestions() -> AnyPublisher<[Question], Error>
-    func submitAnswer(answer: Answer) -> AnyPublisher<Void, Error>
-}
-
 class SurveyDataRepository: SurveyRepository {
     
     private let urlRequestBuilder: URLRequestBuilder
     
-    init(urlRequestBuilder: URLRequestBuilder = DefaultURLRequestBuilder()) {
+    init(urlRequestBuilder: URLRequestBuilder = SurveyURLRequestBuilder()) {
         self.urlRequestBuilder = urlRequestBuilder
     }
     

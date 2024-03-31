@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DefaultURLRequestBuilder: URLRequestBuilder {
+class SurveyURLRequestBuilder: URLRequestBuilder {
     private let baseURL = URL(string: "https://xm-assignment.web.app")!
     
     func makeRequest(withPathComponent pathComponent: String) -> URLRequest {

@@ -11,7 +11,7 @@ import XCTest
 final class SurveyAppTests: XCTestCase {
 
     func testMakeRequestWithPathComponent() throws {
-           let builder = DefaultURLRequestBuilder()
+           let builder = SurveyURLRequestBuilder()
            let expectedURLString = "https://xm-assignment.web.app/questions"
            let request = builder.makeRequest(withPathComponent: "/questions")
            XCTAssertEqual(request.url?.absoluteString, expectedURLString)
